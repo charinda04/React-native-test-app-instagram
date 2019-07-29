@@ -51,7 +51,7 @@ const styles = StyleSheet.create({
   },
   buttonContainer: {
     width: 100,
-    borderRadius: 100,
+    // borderRadius: 100,
     marginTop: 10
   }
 });

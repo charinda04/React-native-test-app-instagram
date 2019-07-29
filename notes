@@ -1,0 +1,13 @@
+client
+navigation - tab navigation
+store - redux
+linting -eslint
+image caching - https://github.com/kfiroo/react-native-cached-image
+thunk? sagas?
+axios? fetch?
+database - realm js
+Secure storage  (default react-native secure storage)
+React-naive config to maintain multiple build environments 
+yarn
+
+backend-node
