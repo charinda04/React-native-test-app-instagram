@@ -1,4 +1,4 @@
-#Thu Jul 25 16:31:31 IST 2019
-base.0=/home/calcey/Workspace/MyTestApp/android/app/build/intermediates/transforms/dexMerger/debug/0
+#Mon Jul 29 14:56:23 IST 2019
+base.0=/home/calcey/Workspace/Instagram/client/android/app/build/intermediates/transforms/dexMerger/debug/0
 path.0=classes.dex
 renamed.0=classes.dex

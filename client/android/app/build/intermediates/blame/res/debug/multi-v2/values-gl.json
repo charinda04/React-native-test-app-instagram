@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "/home/calcey/Workspace/MyTestApp/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-gl/values-gl.xml",
+            "outputFile": "/home/calcey/Workspace/Instagram/client/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-gl/values-gl.xml",
             "map": [
                 {
                     "source": "/home/calcey/.gradle/caches/transforms-2/files-2.1/9cf5662df0356979a5ded9d63832adcf/res/values-gl/values-gl.xml",

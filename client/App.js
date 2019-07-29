@@ -24,6 +24,7 @@ import {
   ReloadInstructions
 } from "react-native/Libraries/NewAppScreen";
 
+
 const App = () => {
   return (
     <Fragment>
@@ -39,6 +40,7 @@ const App = () => {
               <Text style={styles.footer}>Engine: Hermes</Text>
             </View>
           )}
+          
           <View style={styles.body}>
             <View style={styles.sectionContainer}>
               <Text style={styles.sectionTitle}>Step One</Text>
