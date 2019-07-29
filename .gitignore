@@ -1,0 +1,118 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
+/client/node_modules
+/backend-node/node_modules
+
+# /server/node_modules
+# server/node_modules
+
+# testing
+# /coverage
+
+# # production
+# /build
+
+# # misc
+# .DS_Store
+# .env.local
+# .env.development.local
+# .env.test.local
+# .env.production.local
+
+# npm-debug.log*
+# yarn-debug.log*
+# yarn-error.log*
+
+
+
+
+# OSX
+#
+/client/.DS_Store
+
+# Xcode
+#
+/client/build/
+*.pbxuser
+!default.pbxuser
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
+xcuserdata
+*.xccheckout
+*.moved-aside
+DerivedData
+*.hmap
+*.ipa
+*.xcuserstate
+project.xcworkspace
+
+# Android/IntelliJ
+#
+/client/build/
+.idea
+.gradle
+local.properties
+*.iml
+
+# node.js
+#
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# BUCK
+/client/buck-out/
+\.buckd/
+*.keystore
+
+# fastlane
+#
+# It is recommended to not store the screenshots in the git repo. Instead, use fastlane to re-generate the
+# screenshots whenever they are needed.
+# For more information about the recommended setup visit:
+# https://docs.fastlane.tools/best-practices/source-control/
+
+/client/*/fastlane/report.xml
+/client/*/fastlane/Preview.html
+/client/*/fastlane/screenshots
+
+ios/*.dSYM.zip
+ios/Pods
+
+/client/package-lock.json
+/client/yarn.lock
+
+/client/.vscode
+
+# Android RN bundles
+/client/android/app/src/main/assets/index.android.bundle
+/client/android/app/src/main/assets/index.android.bundle.meta
+
+# Crashlytics shit
+/client/android/app/src/main/res/values/com_crashlytics_export_strings.xml
+/client/android/app/src/main/assets/crashlytics-build.properties
+
+# Bundle artifact
+/client/*.jsbundle
+
+# Ignore temp files
+# Bugsnag
+/client/.tmp/android.bundle
+/client/.tmp/android.bundle.map
+/client/.tmp/ios.bundle
+/client/.tmp/ios.bundle.map
+# ENV
+/client/.env
+# Generated release resources
+/client/android/app/src/release/
+
+# any apk files
+/client/*.apk
