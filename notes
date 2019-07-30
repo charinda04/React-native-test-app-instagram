@@ -10,4 +10,12 @@ Secure storage  (default react-native secure storage)
 React-naive config to maintain multiple build environments 
 yarn
 
+
+modules -
+home
+explore
+following
+profile
+
+
 backend-node

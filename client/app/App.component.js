@@ -1,7 +1,6 @@
 // @flow
-import React, { Fragment }  from 'react';
-import {View,SafeAreaView,
-  StyleSheet,
+import React from 'react';
+import {View, SafeAreaView,
   ScrollView,
   Text,
   StatusBar} from 'react-native';
@@ -10,12 +9,10 @@ import type {Element as ReactElement} from 'react';
 import {
   Header,
   LearnMoreLinks,
-  Colors,
   DebugInstructions,
-  ReloadInstructions
-} from "react-native/Libraries/NewAppScreen";
-import { Avatar, Badge, Icon, withBadge, Button } from 'react-native-elements';
-
+  ReloadInstructions,
+} from 'react-native/Libraries/NewAppScreen';
+import {Avatar, Badge, Icon, withBadge, Button} from 'react-native-elements';
 
 import styles from './App.styles';
 
@@ -30,8 +27,8 @@ class AppComponent extends React.PureComponent<AppProps, AppState> {
   }
 
   renderDefaultView = (): ReactElement<any> => {
-    return(
-      <Fragment>
+    return (
+      <View>
         <StatusBar barStyle="dark-content" />
         <SafeAreaView>
           <ScrollView
@@ -44,9 +41,7 @@ class AppComponent extends React.PureComponent<AppProps, AppState> {
                 <Text style={styles.footer}>Engine: Hermes</Text>
               </View>
             )}
-            <View>
-            
-          </View>
+            <View />
             <View style={styles.body}>
               <View style={styles.sectionContainer}>
                 <Text style={styles.sectionTitle}>Step One</Text>
@@ -54,7 +49,7 @@ class AppComponent extends React.PureComponent<AppProps, AppState> {
                   Edit <Text style={styles.highlight}>App.js</Text> to change this
                   screen and then come back to see your edits.
                 </Text>
-                <Button 
+                <Button
                   title="Solid Button"
                 />
               </View>
@@ -80,20 +75,22 @@ class AppComponent extends React.PureComponent<AppProps, AppState> {
             </View>
           </ScrollView>
         </SafeAreaView>
-      </Fragment>
+      </View>
     );
   }
 
   renderTestView = (): ReactElement<any> => {
-    return(
+    return (
       <View>
-        <Badge value="99+" status="error" />
+        <Badge
+          status="error"
+          value="99+"
+        />
         <Badge value={<Text>My Custom Badge</Text>} />
-        <Button 
-          title="test button"
-          // buttonStyle={styles.buttonWrapper}
+        <Button
           containerStyle={styles.buttonContainer}
-          // loading
+          // buttonStyle={styles.buttonWrapper}
+          title="test button"
         />
       </View>
     );
