@@ -1,8 +1,8 @@
 platform :ios, '9.0'
 require_relative '../node_modules/@react-native-community/cli-platform-ios/native_modules'
 
-target 'MyTestApp' do
-  # Pods for MyTestApp
+target 'instagram' do
+  # Pods for instagram
   pod 'React', :path => '../node_modules/react-native/'
   pod 'React-Core', :path => '../node_modules/react-native/React'
   pod 'React-DevSupport', :path => '../node_modules/react-native/React'
@@ -28,9 +28,7 @@ target 'MyTestApp' do
   pod 'glog', :podspec => '../node_modules/react-native/third-party-podspecs/glog.podspec'
   pod 'Folly', :podspec => '../node_modules/react-native/third-party-podspecs/Folly.podspec'
 
-  pod 'RNVectorIcons', :path => '../node_modules/react-native-vector-icons'
-
-  target 'MyTestAppTests' do
+  target 'instagramTests' do
     inherit! :search_paths
     # Pods for testing
   end
@@ -38,10 +36,10 @@ target 'MyTestApp' do
   use_native_modules!
 end
 
-target 'MyTestApp-tvOS' do
-  # Pods for MyTestApp-tvOS
+target 'instagram-tvOS' do
+  # Pods for instagram-tvOS
 
-  target 'MyTestApp-tvOSTests' do
+  target 'instagram-tvOSTests' do
     inherit! :search_paths
     # Pods for testing
   end

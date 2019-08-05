@@ -1,26 +1,46 @@
 // @flow
-import React, { Fragment }  from 'react';
-import {View,SafeAreaView,
-  StyleSheet,
-  ScrollView,
-  Text,
-  StatusBar} from 'react-native';
+import React from 'react';
+import {View, Text, Dimensions} from 'react-native';
 import PropTypes from 'prop-types';
 import type {Element as ReactElement} from 'react';
-import {
-  Header,
-  LearnMoreLinks,
-  Colors,
-  DebugInstructions,
-  ReloadInstructions
-} from "react-native/Libraries/NewAppScreen";
-import { Avatar, Badge, Icon, withBadge, Button } from 'react-native-elements';
-
+import {ButtonComponent} from './shared/index';
+import RootNavigationComponent from './navigation/root';
+import EStyleSheet from 'react-native-extended-stylesheet';
 
 import styles from './App.styles';
 
-type AppProps = {}; // TODO: Add props type here
-type AppState = {}; // TODO: Add state type here
+const {width, height} = Dimensions.get('window');
+
+/**
+ * Viewport width
+ * @type {Number}
+ */
+export const viewportWidth = width;
+
+/**
+ * Viewport height
+ * @type {Number}
+ */
+export const viewportHeight = height;
+
+/**
+ * NOTE
+ *
+ * Setting the font sizes through rem requires a base rem value to be defined
+ * This is calculated using the device width so the font properly scales in different screen sizes
+ * The division is from a magic number, adjust it so the font is proper in a screen size, and it'll scale then after
+ *
+ * This is solely because we have to disable font scaling in Text so the OS level font size changes don't break the UI
+ * If a solution is found to disable OS level font size changes without disabling Text font scaling,
+ * Remove this and replce the stylesheet imports back from react-native
+ */
+EStyleSheet.build({
+  $rem: viewportWidth / 390,
+});
+
+
+type AppProps = {};
+type AppState = {}; 
 
 class AppComponent extends React.PureComponent<AppProps, AppState> {
   static defaultProps: any
@@ -29,83 +49,10 @@ class AppComponent extends React.PureComponent<AppProps, AppState> {
     super(props);
   }
 
-  renderDefaultView = (): ReactElement<any> => {
-    return(
-      <Fragment>
-        <StatusBar barStyle="dark-content" />
-        <SafeAreaView>
-          <ScrollView
-            contentInsetAdjustmentBehavior="automatic"
-            style={styles.scrollView}
-          >
-            <Header />
-            {global.HermesInternal == null ? null : (
-              <View style={styles.engine}>
-                <Text style={styles.footer}>Engine: Hermes</Text>
-              </View>
-            )}
-            <View>
-            
-          </View>
-            <View style={styles.body}>
-              <View style={styles.sectionContainer}>
-                <Text style={styles.sectionTitle}>Step One</Text>
-                <Text style={styles.sectionDescription}>
-                  Edit <Text style={styles.highlight}>App.js</Text> to change this
-                  screen and then come back to see your edits.
-                </Text>
-                <Button 
-                  title="Solid Button"
-                />
-              </View>
-              <View style={styles.sectionContainer}>
-                <Text style={styles.sectionTitle}>See Your Changes</Text>
-                <Text style={styles.sectionDescription}>
-                  <ReloadInstructions />
-                </Text>
-              </View>
-              <View style={styles.sectionContainer}>
-                <Text style={styles.sectionTitle}>Debug</Text>
-                <Text style={styles.sectionDescription}>
-                  <DebugInstructions />
-                </Text>
-              </View>
-              <View style={styles.sectionContainer}>
-                <Text style={styles.sectionTitle}>Learn More</Text>
-                <Text style={styles.sectionDescription}>
-                  Read the docs to discover what to do next:
-                </Text>
-              </View>
-              <LearnMoreLinks />
-            </View>
-          </ScrollView>
-        </SafeAreaView>
-      </Fragment>
-    );
-  }
-
-  renderTestView = (): ReactElement<any> => {
-    return(
-      <View>
-        <Badge value="99+" status="error" />
-        <Badge value={<Text>My Custom Badge</Text>} />
-        <Button 
-          title="test button"
-          // buttonStyle={styles.buttonWrapper}
-          containerStyle={styles.buttonContainer}
-          // loading
-        />
-      </View>
-    );
-  }
-
   renderContent = (): ReactElement<any> => {
-    const defaultView = this.renderDefaultView();
-    const testView = this.renderTestView();
-
     return (
       <View style={styles.container}>
-        {testView}
+        <RootNavigationComponent />
       </View>
     );
   }

@@ -3,10 +3,7 @@
  */
 
 import {AppRegistry} from 'react-native';
-// import App from './App';
-// import AppComponent from '@flashmobile:app/App.component';
-import AppComponent from './app/App.component';
-
+import App from './app/App.component';
 import {name as appName} from './app.json';
 
-AppRegistry.registerComponent(appName, () => AppComponent);
+AppRegistry.registerComponent(appName, () => App);
