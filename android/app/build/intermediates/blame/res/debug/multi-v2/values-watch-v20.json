@@ -1,0 +1,20 @@
+{
+    "logs": [
+        {
+            "outputFile": "/home/charinda/Workspace/Instagram/client/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-watch-v20/values-watch-v20.xml",
+            "map": [
+                {
+                    "source": "/home/charinda/.gradle/caches/transforms-2/files-2.1/83adf7ab6b829fbf3f66d0e3ee00e87a/res/values-watch-v20/values-watch-v20.xml",
+                    "from": {
+                        "startLines": "2,5,8",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "55,214,385",
+                        "endLines": "4,7,10",
+                        "endColumns": "12,12,12",
+                        "endOffsets": "209,380,553"
+                    }
+                }
+            ]
+        }
+    ]
+}
