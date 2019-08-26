@@ -1,0 +1,40 @@
+{
+    "compilerOptions": {
+        "baseUrl": "./",
+        "paths": {
+            "@propozer/*": [
+                "*"
+            ],
+            "@propozer:app/*": [
+                "app/*"
+            ],
+            "@propozer:config/*": [
+                "config/*"
+            ],
+            "@propozer:modules/*": [
+                "app/modules/*"
+            ],
+            "@propozer:navigation/*": [
+                "app/navigation/*"
+            ],
+            "@propozer:shared/*": [
+                "app/shared/*"
+            ],
+            "@propozer:services/*": [
+                "app/services/*"
+            ],
+            "@propozer:theme/*": [
+                "app/theme/*"
+            ],
+            "@propozer:types/*": [
+                "app/types/*"
+            ],
+            "@propozer:storage/*": [
+                "app/storage/*"
+            ]
+        }
+    },
+    "exclude": [
+        "node_modules"
+    ]
+}
