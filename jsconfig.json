@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./",
+    "paths": {
+      "@instagram/*": ["*"],
+      "@instagram:app/*": ["app/*"],
+      "@instagram:config/*": ["config/*"],
+      "@instagram:modules/*": ["app/modules/*"],
+      "@instagram:navigation/*": ["app/navigation/*"],
+      "@instagram:shared/*": ["app/shared/*"],
+      "@instagram:services/*": ["app/services/*"],
+      "@instagram:themes/*": ["app/themes/*"],
+      "@instagram:types/*": ["app/types/*"],
+      "@instagram:storage/*": ["app/storage/*"]
+    }
+  },
+  "exclude": ["node_modules"]
+}
