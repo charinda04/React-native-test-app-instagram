@@ -1,9 +1,7 @@
 // @flow
-import RootScreen from '../../modules/auth/screens/rootScreen/Root.screen';
-import TabNavigator from '../tabNavigator/index';
-
-
-
+// import RootScreen from '../../modules/auth/screens/rootScreen/Root.screen';
+import RootScreen from '@instagram:modules/auth/screens/rootScreen/Root.screen';
+import TabNavigator from '@instagram:navigation/tabNavigator';
 
 export const PRIMARY_STACK_TAB_NAVIGATOR = 'PrimaryStackTabNavigator';
 export const PRIMARY_STACK_ROOT_SCREEN = 'PrimaryStackRootScreen';

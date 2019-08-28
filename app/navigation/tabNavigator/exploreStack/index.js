@@ -1,16 +1,20 @@
 // @flow
-import React from "react";
-import { View } from "react-native";
-import PropTypes from "prop-types";
-import type { Element as ReactElement } from "react";
-import { createStackNavigator, createAppContainer } from "react-navigation";
+import React from 'react';
+import {View} from 'react-native';
+import PropTypes from 'prop-types';
+import type {Element as ReactElement} from 'react';
+import {createStackNavigator, createAppContainer} from 'react-navigation';
 import ExploreStackNavigationService from './ExploreStackNavigation.service';
-import {TabBarIconComponent} from '../../../shared/index'
+import {TabBarIconComponent} from '@instagram:shared/components';
 
 import Icon from 'react-native-vector-icons/FontAwesome';
 
 // import styles from './ExploreTabNavigation.styles';
-import { ROUTES, EXPLORE_FEED_STACK,EXPLORE_LIST_STACK } from "./ExploreStackNavigation.routes";
+import {
+  ROUTES,
+  EXPLORE_FEED_STACK,
+  EXPLORE_LIST_STACK,
+} from './ExploreStackNavigation.routes';
 
 type ExploreTabNavigationProps = {};
 type ExploreTabNavigationState = {};
@@ -20,7 +24,9 @@ const _renderTabBar = (props: any) => (
   //   {...(props || {})}
   //   routes={ROUTES}
   // />
-  <Icon name="rocket" size={30} color="#900" />
+  <Icon name="rocket"
+size={30}
+color="#900" />
 );
 
 // Navigation configurations
@@ -57,7 +63,7 @@ class ExploreTabNavigationComponent extends React.PureComponent<
         />
       );
     },
-  })
+  });
 
   constructor(props: ExploreTabNavigationProps) {
     super(props);
@@ -66,15 +72,10 @@ class ExploreTabNavigationComponent extends React.PureComponent<
   handleRef = (navigatorRef: NavigationContainer): void => {
     this._navigatorRef = navigatorRef;
     ExploreStackNavigationService.setStackNavigator(navigatorRef);
-  }
+  };
 
   renderContent = (): ReactElement<any> => {
-    return(
-      <ExploreTabNavigation
-        ref={this.handleRef}
-      />
-    );
-    
+    return <ExploreTabNavigation ref={this.handleRef} />;
   };
 
   render() {

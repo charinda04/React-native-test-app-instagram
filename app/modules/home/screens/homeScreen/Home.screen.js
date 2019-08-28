@@ -1,35 +1,35 @@
 // @flow
 import React from 'react';
-import { Text, View } from 'react-native';
+import {Text, View} from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
-import { CollapsingToolbarComponent, ListItemComponent } from '../../../../shared/index';
+import {
+  CollapsingToolbarComponent,
+  ListItemComponent,
+} from '@instagram:shared/components';
 import styles from './Home.styles';
 import type {Element as ReactElement} from 'react';
-
-
 
 type HomeProps = {}; // TODO: Add props type here
 type HomeState = {}; // TODO: Add state type here
 
 class HomeScreen extends React.PureComponent<HomeProps, HomeState> {
-  static defaultProps: any
-  
+  static defaultProps: any;
 
   constructor(props: HomeProps) {
     super(props);
   }
 
   renderListItem = () => {
-    return(
+    return (
       <View style={styles.listItem}>
-        <ListItemComponent/>
+        <ListItemComponent />
       </View>
     );
-  }
+  };
 
   renderText = () => {
     return (
-      <View style={styles.wrapper}> 
+      <View style={styles.wrapper}>
         <Text>Home Screen Placeholder</Text>
         <Text>Home Screen Placeholder</Text>
         <Text>Home Screen Placeholder</Text>
@@ -52,7 +52,7 @@ class HomeScreen extends React.PureComponent<HomeProps, HomeState> {
         <Text>Home Screen Placeholder</Text>
       </View>
     );
-  }
+  };
 
   renderHeader = () => {
     return (
@@ -63,30 +63,27 @@ class HomeScreen extends React.PureComponent<HomeProps, HomeState> {
         <Text style={styles.headingTextStyle}>Ella - Sri Lanka</Text>
       </View>
     );
-  }
+  };
 
   renderCollapsingToolbar = () => {
-    return(
+    return (
       <CollapsingToolbarComponent
         leftItem={<Icon name="heart" size={30} color="#fff" />}
-        rightItem={<Icon name="heart" size={30}  color="#fff" />}   
-        toolbarColor='#2196f3'  
-        title={this.renderHeader()}
+        rightItem={<Icon name="heart" size={30} color="#fff" />}
         src={'https://facebook.github.io/react-native/docs/assets/favicon.png'}
+        title={this.renderHeader()}
+        toolbarColor="#2196f3"
       >
         {this.renderText()}
       </CollapsingToolbarComponent>
     );
-  }
+  };
 
   renderContent = (): ReactElement<any> => {
     const collapsingToolbar = this.renderCollapsingToolbar();
-    return (
-      <View style={styles.container}>
-        {collapsingToolbar}
-      </View>
-    );
-  }
+
+    return <View style={styles.container}>{collapsingToolbar}</View>;
+  };
 
   render() {
     const content = this.renderListItem();

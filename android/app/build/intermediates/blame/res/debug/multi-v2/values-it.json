@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "/home/charinda/Workspace/Instagram/client/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-it/values-it.xml",
+            "outputFile": "/home/charinda/Workspace/DIY/Instagram/client/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-it/values-it.xml",
             "map": [
                 {
                     "source": "/home/charinda/.gradle/caches/transforms-2/files-2.1/83adf7ab6b829fbf3f66d0e3ee00e87a/res/values-it/values-it.xml",

@@ -1,16 +1,20 @@
 // @flow
-import React from "react";
-import { View } from "react-native";
-import PropTypes from "prop-types";
-import type { Element as ReactElement } from "react";
-import { createStackNavigator, createAppContainer } from "react-navigation";
+import React from 'react';
+import { View } from 'react-native';
+import PropTypes from 'prop-types';
+import type { Element as ReactElement } from 'react';
+import { createStackNavigator, createAppContainer } from 'react-navigation';
 import ProfileStackNavigationService from './ProfileStackNavigation.service';
-import {TabBarIconComponent} from '../../../shared/index'
+import { TabBarIconComponent } from '@instagram:shared/components';
 
 import Icon from 'react-native-vector-icons/FontAwesome';
 
 // import styles from './ProfileStackNavigation.styles';
-import { ROUTES, PROFILE_STACK, PROFILE_LIST_STACK } from "./ProfileStackNavigation.routes";
+import {
+  ROUTES,
+  PROFILE_STACK,
+  PROFILE_LIST_STACK
+} from './ProfileStackNavigation.routes';
 
 type ProfileStackNavigationProps = {};
 type ProfileStackNavigationState = {};
@@ -29,36 +33,34 @@ const NAV_CONFIG = {
   initialRouteName: PROFILE_STACK,
   headerMode: 'none',
   navigationOptions: {
-    gesturesEnabled: false,
+    gesturesEnabled: false
     // tabBarComponent: _renderTabBar,
-  },
+  }
 };
 
 export const ProfileStackNavigation = createAppContainer(
   createStackNavigator(ROUTES, NAV_CONFIG)
 );
 
-const tabIconStyle= {
-    height: (30),
-    alignItems: 'center',
-    justifyContent: 'center',
-  };
+const tabIconStyle = {
+  height: 30,
+  alignItems: 'center',
+  justifyContent: 'center'
+};
 
 class ProfileStackNavigationComponent extends React.PureComponent<
   ProfileStackNavigationProps,
   ProfileStackNavigationState
 > {
   static defaultProps: any;
-  static navigationOptions: any = ({navigation}) => ({
-    tabBarIcon: ({focused}) => {
+  static navigationOptions: any = ({ navigation }) => ({
+    tabBarIcon: ({ focused }) => {
       const title = 'Profile';
       const iconName = 'pencil';
 
-      return (
-        <Icon name={iconName} size={30} color="#900" />
-      );
-    },
-  })
+      return <Icon name={iconName} size={30} color="#900" />;
+    }
+  });
 
   constructor(props: ProfileStackNavigationProps) {
     super(props);
@@ -67,15 +69,10 @@ class ProfileStackNavigationComponent extends React.PureComponent<
   handleRef = (navigatorRef: NavigationContainer): void => {
     this._navigatorRef = navigatorRef;
     ProfileStackNavigationService.setStackNavigator(navigatorRef);
-  }
+  };
 
   renderContent = (): ReactElement<any> => {
-    return(
-      <ProfileStackNavigation
-        ref={this.handleRef}
-      />
-    );
-    
+    return <ProfileStackNavigation ref={this.handleRef} />;
   };
 
   render() {

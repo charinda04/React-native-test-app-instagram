@@ -2,19 +2,14 @@ import HomeStack from './homeStack/index';
 import ExploreStack from './exploreStack/index';
 import ProfileStack from './profileStack/index';
 
-import Icon from 'react-native-vector-icons/FontAwesome';
-
-
 export const PRIMARY_TAB_NAV_HOME_FEED = 'Home';
 export const PRIMARY_TAB_NAV_EXPLORE_FEED = 'Explore';
 export const PRIMARY_TAB_NAV_PROFILE_FEED = 'Profile';
-
 
 export const ROUTES = {
   [PRIMARY_TAB_NAV_HOME_FEED]: {
     screen: HomeStack,
     path: `/${PRIMARY_TAB_NAV_HOME_FEED}`,
-    navigationOptions: HomeStack.navigationOptions
   },
   [PRIMARY_TAB_NAV_EXPLORE_FEED]: {
     screen: ExploreStack,
